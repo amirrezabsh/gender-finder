@@ -1,4 +1,6 @@
+//an error string fot times that you want to submit a name while input is empty
 const ErrNameMustNotBeEmpty = "Name must not be empty"
+//this function does the name submiting process
 function submitName() {
     let name = document.forms["left-form"]["name"].value
     if (name == ''){
@@ -32,6 +34,7 @@ function submitName() {
     return false
 }
 
+//this function does saving the name process
 function saveName(){
     let name = document.forms["left-form"]["name"].value
     if (name == ''){
@@ -58,6 +61,7 @@ function saveName(){
     return false
 }
 
+//this function does notifing the user process for errors and etc.
 function notify(message) {
     document.getElementById("notifier").style.height = "5%";
     document.getElementById("notifyType").innerHTML = message;
@@ -68,6 +72,7 @@ function notify(message) {
 
 }
 
+//this function does clearing the name form localstorage process
 function clear(){
     let name = document.forms["left-form"]["name"].value
     if (name == ''){
@@ -84,8 +89,10 @@ function clear(){
     }
     return false
 }
+//this line adds the clear function to clear button
 document.getElementById("clear").addEventListener("click", clear);
 
+//this function validates the name entered by user
 function validateName(name){
     var regex = /^[a-zA-Z ]{1,255}$/;
     return regex.test(name);

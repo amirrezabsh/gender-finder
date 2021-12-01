@@ -1,3 +1,4 @@
+/* this block is for body and html of page */
 body, html {
     min-height: 100vh;
     max-height: 100vh;
@@ -6,6 +7,7 @@ body, html {
     overflow: hidden;
     border: none;
 }
+/* this block is for background image and body of the page */
 body {
     background-image: url("../img/gender.jpg");
     background-size: cover;
@@ -16,6 +18,7 @@ body {
     justify-content: center;
     font-family: 'Tahoma', sans-serif;
 }
+/* this block is for the rectangular part at the center of the page*/
 .main-div{
     justify-content: space-evenly;
     border-radius: 15px;
@@ -29,33 +32,42 @@ body {
     justify-items: center;
     align-items: center;
 }
+/* this block is for the input and it's label div */
 .name-div{
     display: flex;
 }
+/* this block is for the label of the input */
 .name-text-div{
     margin-right: 15px;
 }
+/* this block is for the div which radio buttons are in it */
 .radio-div{
     margin-top: 30px;
 }
+/* this block is for the submit and save buttons div */
 .submit-div{
     margin-top: 20px;
 }
+/* this block is for the part which we show the probability */
 .score-div{
     margin-top: 10px;
 }
+/* this block is for clear button */
 .clear-button{
     margin-top: 20px;
 }
+/* this block is for the part which we show saved answers */
 .saved-answer-div{
     margin-top: 10px;
     padding: 10px;
     border: 1px black solid;
     border-radius: 15px;
 }
+/* this block is for the female radio button */
 #female-button{
     margin-top: 10px;
 }
+/* this block and next two blocks are for the part which we show a notification to user */
 .active{
     height:50px;
 }
@@ -81,9 +93,11 @@ body {
     margin: 15px;
     display: inline-block;
 }
+/* this block is for the left div in central rectangular */
 .left-div{
     min-width: 300px;
 }
+/* this block is for the right div in central rectangular */
 .righ-div{
     min-width: 300px;
 }
