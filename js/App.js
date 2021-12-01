@@ -5,10 +5,18 @@ function submitName() {
     let name = document.forms["left-form"]["name"].value
     if (name == ''){
         notify(ErrNameMustNotBeEmpty)
+        document.getElementById("save").disabled = true
+        document.getElementById("gender").innerHTML = "No data!"
+        document.getElementById("score").innerHTML = "No data!"
+        document.getElementById("answer").innerHTML = "No name entered!"
         return false
     }
     if (!validateName(name)) {
         notify("Enter a valid name!")
+        document.getElementById("save").disabled = true
+        document.getElementById("gender").innerHTML = "No data!"
+        document.getElementById("score").innerHTML = "No data!"
+        document.getElementById("answer").innerHTML = "No name entered!"
         return false
     }
     if (localStorage.getItem(name) == null) {
@@ -26,6 +34,7 @@ function submitName() {
         document.getElementById("save").disabled = false
         document.getElementById("gender").innerHTML = "No data!"
         document.getElementById("score").innerHTML = "No data!"
+        document.getElementById("answer").innerHTML = "No record found!"
         return false
     }
     document.getElementById("gender").innerHTML = response.gender
