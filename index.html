@@ -1,13 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>GitGet</title>
+    <title>GenderFinder</title>
     <link href="css/main.css" rel="stylesheet">
     <script type="text/javascript" src="js/App.js" defer></script>
 </head>
-<body>
-    <div class="main-div" >
 
+<body>
+    <div>
+        <div class="main-div" id="main">
+            <div class="left-div" id="left">
+                <h2 class="left-title-text" id="left-title">Mr. or Ms.?</h2>
+                <form name="left-form">
+                    <div class="name-div" id="name">
+                        <div class="name-text-div" id="name-text">Name</div>
+                        <input type="text" maxlength="225" class="input" id="name-input" name="name">
+                    </div>
+                    <div class="radio-div" id="radio">
+                        <input type="radio" id="male-button" name="radio-input" value="male">
+                        <label for="male-button">Male</label><br>
+                        <input type="radio" id="female-button" name="radio-input" value="female">
+                        <label for="female-button">Female</label>
+                    </div>
+                    <div class="submit-div">
+                        <button class="submit-button" onclick="return submitName()">Submit</button>
+                        <button class="save-button" onclick="return saveName()" disabled="true" id="save">Save</button>
+                    </div>
+                </form>
+            </div>
+            <div class="right-div" id="right">
+                <div class="prediction-div">
+                    <h2 class="prediction-title-text">Prediction</h2>
+                    <div class="gender-div" id="gender">No data!</div>
+                    <div class="score-div" id="score">No data!</div>
+                </div>
+                <div class="saved-answer-div">
+                    <h2>Saved Answer</h2>
+                    <div class="answer-div" id="answer">No name entered!</div>
+                    <button class="clear-button"  type="button" id="clear">Clear</button>
+                </div>
+            </div>
+        </div>
     </div>
+    <div id="notifier" class="notify"><span id="notifyType" class=""></span></div>
+
 </body>
+
+</html>
