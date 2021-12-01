@@ -46,7 +46,7 @@ function saveName(){
         localStorage.setItem(name,"Male")
         document.getElementById("answer").innerHTML = "Male"
     }
-    else if (document.forms["left-form"]["male-button"].checked) {
+    else if (document.forms["left-form"]["female-button"].checked) {
         localStorage.setItem(name,"Female")
         document.getElementById("answer").innerHTML = "Female"
     }
