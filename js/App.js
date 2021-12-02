@@ -40,7 +40,7 @@ function submitName() {
     document.getElementById("gender").innerHTML = response.gender
     document.getElementById("score").innerHTML = response.probability
     document.getElementById("save").disabled = false
-    var ele = document.getElementsByName("radio-button");
+    var ele = document.getElementsByName("radio-input");
     for (var i = 0; i < ele.length; i++) {
         ele[i].checked = false;
     }
